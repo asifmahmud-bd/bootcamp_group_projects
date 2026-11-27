@@ -25,7 +25,7 @@
   // inline-completion provider, not just Copilot. The manual trigger command
   // still exists — this is a contract, not a cage.
   "editor.inlineSuggest.enabled": false,
-
+  "css.lint.unknownAtRules": "ignore",
   // Copilot's per-language switch. Languages are enumerated on purpose:
   // object-valued settings MERGE across scopes, so "*": false on its own would
   // lose to a user-level "javascript": true.
