@@ -32,10 +32,16 @@
 
     /* Accent */
     --color-star: #ffc71e;           /* rating star */
+
+    --container-page: 77rem;   /* 1232px, the content width in the Figma file */
   }
+
+ @layer base {
+ /*  * { outline: 1px solid var(--color-star); } */ /*for debugging*/
+}
 </style>
 </head>
-<body>
+<body class="max-w-page mx-auto px-6 overflow-x-clip">
 
   <!-- ===== Header / Navigation ===== -->
   <header id="header">
@@ -56,38 +62,69 @@
   <main>
 
     <!-- ===== Hero ===== -->
-    <section id="hero">
-      <h1>Find Your Dream Home</h1>
-      <p>Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision</p>
-      <a href="#">Sign up</a>
-      <img src="images/hero-house.png" alt="Modern multi-storey house">
-    </section>
+<section id="hero" class="bg-brand-light mx-[calc(50%-50vw)]">
+  <div class="relative max-w-page mx-auto px-6 grid gap-4 md:grid-cols-2 md:min-h-[582px]">
+    <div class="relative z-10 flex flex-col justify-center gap-4">
+      <h1 class="text-[68px] font-extrabold text-brand leading-none ">Find Your Dream Home</h1>
+      <p class="leading-6 max-w-[350px]">Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision</p>
+     <a href="#" class="self-start mt-4 rounded-lg bg-brand px-13 py-[18px] text-lg font-semibold leading-none text-white hover:opacity-90">Sign up</a>
+    </div>
+      <img class="w-full mt-8 md:mt-0 md:absolute md:z-1 md:right-0 md:top-[10px] md:w-[65%] md:max-w-[700px]" src="assets/images/hero-house.png" alt="Modern multi-storey house">
+  </div>
+
+
+</section>
 
     <!-- ===== Property search ===== -->
-    <section id="search">
-      <form>
-        <label for="location">Location</label>
-        <select id="location" name="location">
-          <option value="">Location</option>
-        </select>
+<!-- ===== Property search ===== -->
+<section id="search" class="relative z-20 -mt-16 px-6">
+  <form class="mx-auto max-w-[1070px] rounded-[18px] bg-brand-soft p-6 shadow-[0_10px_30px_rgba(43,27,18,0.15)]
+               grid gap-4 md:flex md:items-center md:gap-6 md:px-8 md:py-[51px]">
 
-        <label for="type">Type</label>
-        <select id="type" name="type">
-          <option value="">Type</option>
-        </select>
+    <div class="relative md:flex-1">
+      <label for="location" class="sr-only">Location</label>
+      <select id="location" name="location"
+              class="w-full appearance-none rounded-lg bg-field py-[18px] pl-4 pr-12 text-lg font-bold leading-none text-text-muted">
+        <option value="">Location</option>
+      </select>
+      <svg class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2" width="22" height="22" viewBox="0 0 24 24" fill="#695346" aria-hidden="true">
+        <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+      </svg>
+    </div>
 
-        <label for="price">Price Range</label>
-        <select id="price" name="price">
-          <option value="">Price Range</option>
-        </select>
+    <div class="relative md:flex-1">
+      <label for="type" class="sr-only">Type</label>
+      <select id="type" name="type"
+              class="w-full appearance-none rounded-lg bg-field py-[18px] pl-4 pr-12 text-lg font-bold leading-none text-text-muted">
+        <option value="">Type</option>
+      </select>
+      <svg class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2" width="22" height="22" viewBox="0 0 24 24" fill="#695346" aria-hidden="true">
+        <path d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3z"/>
+      </svg>
+    </div>
 
-        <button type="submit">Sign up</button>
-      </form>
-    </section>
+    <div class="relative md:flex-1">
+      <label for="price" class="sr-only">Price Range</label>
+      <select id="price" name="price"
+              class="w-full appearance-none rounded-lg bg-field py-[18px] pl-4 pr-12 text-lg font-bold leading-none text-text-muted">
+        <option value="">Price Range</option>
+      </select>
+      <svg class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" fill="#695346"/>
+        <text x="12" y="16.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fbf5f1">$</text>
+      </svg>
+    </div>
+
+    <button type="submit"
+            class="rounded-lg bg-brand px-10 py-[18px] text-lg font-semibold leading-none text-white hover:opacity-90">
+      Search
+    </button>
+  </form>
+</section>
 
     <!-- ===== About + stats ===== -->
     <section id="about">
-      <img src="images/about-house-exterior.jpg" alt="Luxury home exterior, side view">
+      <img src="assets/images/about-house-exterior.jpg" alt="Luxury home exterior, side view">
       <h2>We Help You To Find Your Dream Home</h2>
       <p>From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality</p>
       <ul>
@@ -103,22 +140,22 @@
       <p>Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service</p>
 
       <article>
-        <img src="images/icon-map-pin.png" alt="">
+        <img src="assets/images/icon-map-pin.png" alt="">
         <h3>Expert Guidance</h3>
         <p>Benefit from our team's seasoned expertise for a smooth buying experience</p>
       </article>
       <article>
-        <img src="images/icon-service.png" alt="">
+        <img src="assets/images/icon-service.png" alt="">
         <h3>Personalized Service</h3>
         <p>Our services adapt to your unique needs, making your journey stress-free</p>
       </article>
       <article>
-        <img src="images/icon-document.png" alt="">
+        <img src="assets/images/icon-document.png" alt="">
         <h3>Transparent Process</h3>
         <p>Stay informed with our clear and honest approach to buying your home</p>
       </article>
       <article>
-        <img src="images/icon-handshake.png" alt="">
+        <img src="assets/images/icon-handshake.png" alt="">
         <h3>Exceptional Support</h3>
         <p>Providing peace of mind with our responsive and attentive customer service</p>
       </article>
@@ -129,33 +166,33 @@
       <h2>Our Popular Residences</h2>
 
       <article>
-        <img src="images/residence-san-francisco.png" alt="House in San Francisco">
-        <p><img src="images/icon-location.png" alt=""> San Francisco, California</p>
+        <img src="assets/images/residence-san-francisco.png" alt="House in San Francisco">
+        <p><img src="assets/images/icon-location.png" alt=""> San Francisco, California</p>
         <ul>
-          <li><img src="images/icon-rooms.png" alt=""> 4 Rooms</li>
-          <li><img src="images/icon-size.png" alt=""> 3,500 sq ft</li>
+          <li><img src="assets/images/icon-rooms.png" alt=""> 4 Rooms</li>
+          <li><img src="assets/images/icon-size.png" alt=""> 3,500 sq ft</li>
         </ul>
         <a href="#">Sign up</a>
         <p>$2,500,000</p>
       </article>
 
       <article>
-        <img src="images/residence-beverly-hills.png" alt="House in Beverly Hills">
-        <p><img src="images/icon-location.png" alt=""> Beverly Hills, California</p>
+        <img src="assets/images/residence-beverly-hills.png" alt="House in Beverly Hills">
+        <p><img src="assets/images/icon-location.png" alt=""> Beverly Hills, California</p>
         <ul>
-          <li><img src="images/icon-rooms.png" alt=""> 3 Rooms</li>
-          <li><img src="images/icon-size.png" alt=""> 1,500 sq ft</li>
+          <li><img src="assets/images/icon-rooms.png" alt=""> 3 Rooms</li>
+          <li><img src="assets/images/icon-size.png" alt=""> 1,500 sq ft</li>
         </ul>
         <a href="#">Sign up</a>
         <p>$850,000</p>
       </article>
 
       <article>
-        <img src="images/residence-palo-alto.png" alt="House in Palo Alto">
-        <p><img src="images/icon-location.png" alt=""> Palo Alto, California</p>
+        <img src="assets/images/residence-palo-alto.png" alt="House in Palo Alto">
+        <p><img src="assets/images/icon-location.png" alt=""> Palo Alto, California</p>
         <ul>
-          <li><img src="images/icon-rooms.png" alt=""> 6 Rooms</li>
-          <li><img src="images/icon-size.png" alt=""> 4,000 sq ft</li>
+          <li><img src="assets/images/icon-rooms.png" alt=""> 6 Rooms</li>
+          <li><img src="assets/images/icon-size.png" alt=""> 4,000 sq ft</li>
         </ul>
         <a href="#">Sign up</a>
         <p>$3,700,000</p>
@@ -167,8 +204,8 @@
       <h2>What People Say About Dwello</h2>
 
       <article>
-        <img src="images/testimonial-cover-sarah.jpg" alt="">
-        <img src="images/avatar-sarah-nguyen.jpg" alt="Sarah Nguyen">
+        <img src="assets/images/testimonial-cover-sarah.jpg" alt="">
+        <img src="assets/images/avatar-sarah-nguyen.jpg" alt="Sarah Nguyen">
         <h3>Sarah Nguyen</h3>
         <p>San Francisco</p>
         <p>Rating: 5.0</p>
@@ -178,8 +215,8 @@
       </article>
 
       <article>
-        <img src="images/testimonial-cover-michael.jpg" alt="">
-        <img src="images/avatar-michael-rodriguez.jpg" alt="Michael Rodriguez">
+        <img src="assets/images/testimonial-cover-michael.jpg" alt="">
+        <img src="assets/images/avatar-michael-rodriguez.jpg" alt="Michael Rodriguez">
         <h3>Michael Rodriguez</h3>
         <p>San Diego</p>
         <p>Rating: 4.5</p>
@@ -189,8 +226,8 @@
       </article>
 
       <article>
-        <img src="images/testimonial-cover-emily.jpg" alt="">
-        <img src="images/avatar-emily-johnson.jpg" alt="Emily Johnson">
+        <img src="assets/images/testimonial-cover-emily.jpg" alt="">
+        <img src="assets/images/avatar-emily-johnson.jpg" alt="Emily Johnson">
         <h3>Emily Johnson</h3>
         <p>Los Angeles</p>
         <p>Rating: 5.0</p>
@@ -207,11 +244,11 @@
     <section id="contact">
       <h2>Do You Have Any Questions? Get Help From Us</h2>
       <ul>
-        <li><img src="images/icon-verified.png" alt=""> Chat live with our support team</li>
-        <li><img src="images/icon-verified.png" alt=""> Browse our FAQ</li>
+        <li><img src="assets/images/icon-verified.png" alt=""> Chat live with our support team</li>
+        <li><img src="assets/images/icon-verified.png" alt=""> Browse our FAQ</li>
       </ul>
       <form>
-        <label for="email"><img src="images/icon-email.png" alt=""> Email</label>
+        <label for="email"><img src="assets/images/icon-email.png" alt=""> Email</label>
         <input type="email" id="email" name="email" placeholder="Enter your email address...">
         <button type="submit">Submit</button>
       </form>
