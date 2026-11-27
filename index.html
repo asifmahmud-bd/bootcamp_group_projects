@@ -7,34 +7,49 @@
   <title>Dwello — Find Your Dream Home</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <style type="text/tailwindcss">
-    @theme {
-      --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+<style type="text/tailwindcss">
+  @theme {
+    --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
-      /* Brand */
-      --color-brand: #2b1b12;          /* dark brown: buttons, headings, logo */
-      --color-brand-soft: #ddc7bb;     /* sand: cards, search bar, footer */
-      --color-brand-light: #fef7f2;    /* cream: hero and testimonials backgrounds */
+    /* Brand */
+    --color-brand: #2b1b12;          /* dark brown: buttons, headings, logo */
+    --color-brand-soft: #ddc7bb;     /* sand: cards, search bar, footer */
+    --color-brand-light: #fef7f2;    /* cream: hero and testimonials backgrounds */
 
-      /* Surfaces */
-      --color-bg: #ffffff;             /* page background */
-      --color-field: #fbf5f1;          /* inputs, icon tiles */
-      --color-placeholder: #d9d9d9;    /* image placeholders */
+    /* Surfaces */
+    --color-bg: #ffffff;             /* page background */
+    --color-field: #fbf5f1;          /* inputs, icon tiles */
+    --color-placeholder: #d9d9d9;    /* image placeholders */
 
-      /* Text */
-      --color-text: #2b1b12;           /* headings */
-      --color-text-body: #4f3527;      /* paragraphs, stats, prices */
-      --color-text-muted: #695346;     /* search field labels */
-      --color-text-soft: #543e32;      /* help links, input placeholder */
+    /* Text */
+    --color-text: #2b1b12;           /* headings */
+    --color-text-body: #4f3527;      /* paragraphs, stats, prices */
+    --color-text-muted: #695346;     /* search field labels */
+    --color-text-soft: #543e32;      /* help links, input placeholder */
 
-      /* Accent */
-      --color-star: #ffc71e;           /* rating star */
-    }
-  </style>
+    /* Accent */
+    --color-star: #ffc71e;           /* rating star */
+  }
+
+  /* Base: Body/Root global */
+  /*
+     @layer base {
+     html {
+          font-family: var(--font-sans);
+     }
+
+     body {
+          background: var(--bg);
+          color: var(--text);
+     }
+
+     }
+*/  
+</style>
 </head>
 
 <body>
@@ -142,43 +157,79 @@
       </article>
     </section>
 
-    <!-- ===== Popular Residences ===== -->
-    <section id="residences">
-      <h2>Our Popular Residences</h2>
+     <!-- ===== Popular Residences ===== -->
+     <section id="residences" class="grid grid-cols-1 gap-2 md:grid-cols-3">
+          <h2 class="font-bold md:col-span-3">Our Popular Residences</h2>
+          <article class="grid grid-cols-1 md:grid-cols-2 flex flex-wrap justify-items-center rounded-xl bg-[var(--color-brand-soft)]">
+               <img src="./assets/images/residence-san-francisco.png" class="w-full col-span-full rounded-t-xl"
+                    alt="House in San Francisco">
+               <p class="md:col-span-2 flex items-center gap-2 pt-3 text-2xl">
+                    <img src="./assets/images/icon-location.png" class="h-6 w-6" alt=""> San Francisco, California
+               </p>
+               <ul class="col-span-full flex items-center gap-2 pt-3 text-[var(--color-text-muted)]">
+                    <li class="flex items-center gap-2">
+                         <img src="./assets/images/icon-rooms.png" class="h-6 w-6 bg-[var(--color-brand-light)]" alt="">
+                         4 Rooms
+                    </li>
+                    <li class="flex items-center gap-2">
+                         <img src="./assets/images/icon-size.png" class="h-6 w-6 bg-[var(--color-brand-light)]" alt="">
+                         3,500 sq ft
+                    </li>
+               </ul>
+               <div class="col-span-full flex w-full flex-wrap items-center justify-between gap-3 p-4">
+                    <a href="#" class="flex h-9 w-22 shrink-0 items-center justify-center rounded-xl bg-[var(--color-brand)] text-sm text-white">
+                         Sign up
+                    </a>
+                    <p class="min-w-0 text-xl text-[var(--color-text-soft)] sm:text-3xl">$2,500,000</p>
+               </div>
+          </article>
 
-      <article>
-        <img src="images/residence-san-francisco.png" alt="House in San Francisco">
-        <p><img src="images/icon-location.png" alt=""> San Francisco, California</p>
-        <ul>
-          <li><img src="images/icon-rooms.png" alt=""> 4 Rooms</li>
-          <li><img src="images/icon-size.png" alt=""> 3,500 sq ft</li>
-        </ul>
-        <a href="#">Sign up</a>
-        <p>$2,500,000</p>
-      </article>
+          <article class="grid grid-cols-1 md:grid-cols-2 flex flex-wrap justify-items-center rounded-xl bg-[var(--color-brand-soft)]">
+               <img src="./assets/images/residence-beverly-hills.png" class="w-full col-span-full rounded-t-xl" alt="House in Beverly Hills">
+               <p class="md:col-span-2 flex items-center gap-2 pt-3 text-2xl">
+                    <img src="./assets/images/icon-location.png" class="h-6 w-6" alt="">Beverly Hills, California
+               </p>
+               <ul class="col-span-full flex items-center pt-3 gap-2 text-[var(--color-text-muted)]">
+                    <li class="flex items-center gap-2">
+                         <img src="./assets/images/icon-rooms.png" class="h-6 w-6 bg-[var(--color-brand-light)]" alt="">
+                         3 Rooms
+                    </li>
+                    <li class="flex items-center gap-2">
+                         <img src="./assets/images/icon-size.png" class="h-6 w-6 bg-[var(--color-brand-light)]" alt="">
+                         1,500 sq ft
+                    </li>
+               </ul>
+               <div class="col-span-full flex w-full flex-wrap items-center justify-between gap-3 p-4">
+                    <a href="#" class="flex h-9 w-22 shrink-0 items-center justify-center rounded-xl bg-[var(--color-brand)] text-sm text-white">
+                         Sign up
+                    </a>
+                    <p class="min-w-0 text-xl text-[var(--color-text-soft)] sm:text-3xl">$850,000</p>
+               </div>
+          </article>
 
-      <article>
-        <img src="images/residence-beverly-hills.png" alt="House in Beverly Hills">
-        <p><img src="images/icon-location.png" alt=""> Beverly Hills, California</p>
-        <ul>
-          <li><img src="images/icon-rooms.png" alt=""> 3 Rooms</li>
-          <li><img src="images/icon-size.png" alt=""> 1,500 sq ft</li>
-        </ul>
-        <a href="#">Sign up</a>
-        <p>$850,000</p>
-      </article>
-
-      <article>
-        <img src="images/residence-palo-alto.png" alt="House in Palo Alto">
-        <p><img src="images/icon-location.png" alt=""> Palo Alto, California</p>
-        <ul>
-          <li><img src="images/icon-rooms.png" alt=""> 6 Rooms</li>
-          <li><img src="images/icon-size.png" alt=""> 4,000 sq ft</li>
-        </ul>
-        <a href="#">Sign up</a>
-        <p>$3,700,000</p>
-      </article>
-    </section>
+          <article class="grid grid-cols-1 md:grid-cols-2 flex flex-wrap justify-items-center rounded-xl bg-[var(--color-brand-soft)]">
+               <img src="./assets/images/residence-palo-alto.png" class="w-full col-span-full rounded-t-xl" alt="House in Palo Alto">
+               <p class="md:col-span-2 flex items-center gap-2 pt-3 text-2xl">
+                    <img src="./assets/images/icon-location.png" class="h-6 w-6" alt=""> Palo Alto, California
+               </p>
+               <ul class="col-span-full flex items-center pt-3 gap-2 text-[var(--color-text-muted)]">
+                    <li class="flex items-center gap-2">
+                         <img src="./assets/images/icon-rooms.png" class="h-6 w-6 bg-[var(--color-brand-light)]" alt="">
+                         6 Rooms
+                    </li>
+                    <li class="flex items-center gap-2">
+                         <img src="./assets/images/icon-size.png" class="h-6 w-6 bg-[var(--color-brand-light)]" alt="">
+                         4,000 sq ft
+                    </li>
+               </ul>
+               <div class="col-span-full flex w-full flex-wrap items-center justify-between gap-3 p-4">
+                    <a href="#" class="flex h-9 w-22 shrink-0 items-center justify-center rounded-xl bg-[var(--color-brand)] text-sm text-white">
+                         Sign up
+                    </a>
+                    <p class="min-w-0 text-xl text-[var(--color-text-soft)] sm:text-3xl">$3,700,000</p>
+               </div>
+          </article>
+     </section>
 
     <!-- ===== Testimonials ===== -->
     <section id="testimonials">
