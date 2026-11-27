@@ -86,16 +86,33 @@
     </section>
 
     <!-- ===== About + stats ===== -->
-    <section id="about">
-      <img src="images/about-house-exterior.jpg" alt="Luxury home exterior, side view">
-      <h2>We Help You To Find Your Dream Home</h2>
-      <p>From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality</p>
-      <ul>
-        <li><strong>8K+</strong> Houses Available</li>
-        <li><strong>6K+</strong> Houses Sold</li>
-        <li><strong>2K+</strong> Trusted Agents</li>
-      </ul>
-    </section>
+     <section id="about" class="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+          <img src="./assets/images/about-house-exterior.jpg" alt="Luxury home exterior, side view"
+               class="h-full w-full rounded-xl object-cover">
+
+          <div>
+               <h2 class="text-3xl font-bold">We Help You To Find Your Dream Home</h2>
+               <p class="mt-4 text-[var(--color-text)]">
+                    From cozy cottages to luxurious estates, our dedicated team guides you through every step
+                    of the journey, ensuring your dream home becomes a reality.
+               </p>
+
+               <ul class="mt-8 grid grid-cols-3 gap-4 text-center">
+                    <li>
+                         <strong class="block text-2xl font-bold">8K+</strong>
+                         <span class="mt-1 block">Houses Available</span>
+                    </li>
+                    <li>
+                         <strong class="block text-2xl font-bold">6K+</strong>
+                         <span class="mt-1 block">Houses Sold</span>
+                    </li>
+                    <li>
+                         <strong class="block text-2xl font-bold">2K+</strong>
+                         <span class="mt-1 block">Trusted Agents</span>
+                    </li>
+               </ul>
+          </div>
+     </section>
 
     <!-- ===== Why Choose Us ===== -->
     <section id="services">
