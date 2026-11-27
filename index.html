@@ -2,292 +2,284 @@
 <html lang="en">
 
 <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Dwello — Find Your Dream Home</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-     <!-- <link rel="stylesheet" href="css/style.css"> -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dwello — Find Your Dream Home</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
-     <style type="text/tailwindcss">
-          @theme {
-    --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
-    /* Brand */
-    --color-brand: #2b1b12;          /* dark brown: buttons, headings, logo */
-    --color-brand-soft: #ddc7bb;     /* sand: cards, search bar, footer */
-    --color-brand-light: #fef7f2;    /* cream: hero and testimonials backgrounds */
+      /* Brand */
+      --color-brand: #2b1b12;          /* dark brown: buttons, headings, logo */
+      --color-brand-soft: #ddc7bb;     /* sand: cards, search bar, footer */
+      --color-brand-light: #fef7f2;    /* cream: hero and testimonials backgrounds */
 
-    /* Surfaces */
-    --color-bg: #ffffff;             /* page background */
-    --color-field: #fbf5f1;          /* inputs, icon tiles */
-    --color-placeholder: #d9d9d9;    /* image placeholders */
+      /* Surfaces */
+      --color-bg: #ffffff;             /* page background */
+      --color-field: #fbf5f1;          /* inputs, icon tiles */
+      --color-placeholder: #d9d9d9;    /* image placeholders */
 
-    /* Text */
-    --color-text: #2b1b12;           /* headings */
-    --color-text-body: #4f3527;      /* paragraphs, stats, prices */
-    --color-text-muted: #695346;     /* search field labels */
-    --color-text-soft: #543e32;      /* help links, input placeholder */
+      /* Text */
+      --color-text: #2b1b12;           /* headings */
+      --color-text-body: #4f3527;      /* paragraphs, stats, prices */
+      --color-text-muted: #695346;     /* search field labels */
+      --color-text-soft: #543e32;      /* help links, input placeholder */
 
-    /* Accent */
-    --color-star: #ffc71e;           /* rating star */
-  }
-</style>
+      /* Accent */
+      --color-star: #ffc71e;           /* rating star */
+    }
+  </style>
 </head>
 
 <body>
 
-     <!-- ===== Header / Navigation ===== -->
-     <header id="header">
-          <a href="#">Dwello</a>
-          <nav>
-               <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#services">Service</a></li>
-                    <li><a href="#residences">Agents</a></li>
-                    <li><a href="#contact">Contact</a></li>
-               </ul>
-          </nav>
-          <button type="button" aria-label="Search">Search</button>
-          <button type="button" aria-label="Account">Account</button>
-          <a href="#">Sign up</a>
-     </header>
+  <!-- ===== Header / Navigation ===== -->
+  <header id="header">
+    <a href="#">Dwello</a>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#residences">Agents</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button type="button" aria-label="Search">Search</button>
+    <button type="button" aria-label="Account">Account</button>
+    <a href="#">Sign up</a>
+  </header>
 
-     <main>
+  <main>
 
-          <!-- ===== Hero ===== -->
-          <section id="hero">
-               <h1>Find Your Dream Home</h1>
-               <p>Explore our curated selection of exquisite properties meticulously tailored to your unique dream home
-                    vision</p>
-               <a href="#">Sign up</a>
-               <img src="images/hero-house.png" alt="Modern multi-storey house">
-          </section>
+    <!-- ===== Hero ===== -->
+    <section id="hero">
+      <h1>Find Your Dream Home</h1>
+      <p>Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision</p>
+      <a href="#">Sign up</a>
+      <img src="images/hero-house.png" alt="Modern multi-storey house">
+    </section>
 
-          <!-- ===== Property search ===== -->
-          <section id="search">
-               <form>
-                    <label for="location">Location</label>
-                    <select id="location" name="location">
-                         <option value="">Location</option>
-                    </select>
+    <!-- ===== Property search ===== -->
+    <section id="search">
+      <form>
+        <label for="location">Location</label>
+        <select id="location" name="location">
+          <option value="">Location</option>
+        </select>
 
-                    <label for="type">Type</label>
-                    <select id="type" name="type">
-                         <option value="">Type</option>
-                    </select>
+        <label for="type">Type</label>
+        <select id="type" name="type">
+          <option value="">Type</option>
+        </select>
 
-                    <label for="price">Price Range</label>
-                    <select id="price" name="price">
-                         <option value="">Price Range</option>
-                    </select>
+        <label for="price">Price Range</label>
+        <select id="price" name="price">
+          <option value="">Price Range</option>
+        </select>
 
-                    <button type="submit">Sign up</button>
-               </form>
-          </section>
+        <button type="submit">Sign up</button>
+      </form>
+    </section>
 
-          <!-- ===== About + stats ===== -->
-          <section id="about" class="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-               <img src="./assets/images/about-house-exterior.jpg" alt="Luxury home exterior, side view"
-                    class="h-full w-full rounded-xl object-cover">
+    <!-- ===== About + stats ===== -->
+    <section id="about" class="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+      <img src="./assets/images/about-house-exterior.jpg" alt="Luxury home exterior, side view" class="h-full w-full rounded-xl object-cover">
 
-               <div>
-                    <h2 class="text-3xl font-bold">We Help You To Find Your Dream Home</h2>
-                    <p class="mt-4 text-[var(--color-text)]">
-                         From cozy cottages to luxurious estates, our dedicated team guides you through every step
-                         of the journey, ensuring your dream home becomes a reality.
-                    </p>
+      <div>
+        <h2 class="text-3xl font-bold">We Help You To Find Your Dream Home</h2>
+        <p class="mt-4 text-[var(--color-text)]">
+          From cozy cottages to luxurious estates, our dedicated team guides you through every step
+          of the journey, ensuring your dream home becomes a reality.
+        </p>
 
-                    <ul class="mt-8 grid grid-cols-3 gap-4 text-center">
-                         <li>
-                              <strong class="block text-2xl font-bold">8K+</strong>
-                              <span class="mt-1 block">Houses Available</span>
-                         </li>
-                         <li>
-                              <strong class="block text-2xl font-bold">6K+</strong>
-                              <span class="mt-1 block">Houses Sold</span>
-                         </li>
-                         <li>
-                              <strong class="block text-2xl font-bold">2K+</strong>
-                              <span class="mt-1 block">Trusted Agents</span>
-                         </li>
-                    </ul>
-               </div>
-          </section>
+        <ul class="mt-8 grid grid-cols-3 gap-4 text-center">
+          <li>
+            <strong class="block text-2xl font-bold">8K+</strong>
+            <span class="mt-1 block">Houses Available</span>
+          </li>
+          <li>
+            <strong class="block text-2xl font-bold">6K+</strong>
+            <span class="mt-1 block">Houses Sold</span>
+          </li>
+          <li>
+            <strong class="block text-2xl font-bold">2K+</strong>
+            <span class="mt-1 block">Trusted Agents</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-          <!-- ===== Why Choose Us ===== -->
-          <section id="services">
-               <h2>Why Choose Us</h2>
-               <p>Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service
-               </p>
+    <!-- ===== Why Choose Us ===== -->
+    <section id="services">
+      <h2>Why Choose Us</h2>
+      <p>Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service</p>
 
-               <article>
-                    <img src="images/icon-map-pin.png" alt="">
-                    <h3>Expert Guidance</h3>
-                    <p>Benefit from our team's seasoned expertise for a smooth buying experience</p>
-               </article>
-               <article>
-                    <img src="images/icon-service.png" alt="">
-                    <h3>Personalized Service</h3>
-                    <p>Our services adapt to your unique needs, making your journey stress-free</p>
-               </article>
-               <article>
-                    <img src="images/icon-document.png" alt="">
-                    <h3>Transparent Process</h3>
-                    <p>Stay informed with our clear and honest approach to buying your home</p>
-               </article>
-               <article>
-                    <img src="images/icon-handshake.png" alt="">
-                    <h3>Exceptional Support</h3>
-                    <p>Providing peace of mind with our responsive and attentive customer service</p>
-               </article>
-          </section>
+      <article>
+        <img src="images/icon-map-pin.png" alt="">
+        <h3>Expert Guidance</h3>
+        <p>Benefit from our team's seasoned expertise for a smooth buying experience</p>
+      </article>
+      <article>
+        <img src="images/icon-service.png" alt="">
+        <h3>Personalized Service</h3>
+        <p>Our services adapt to your unique needs, making your journey stress-free</p>
+      </article>
+      <article>
+        <img src="images/icon-document.png" alt="">
+        <h3>Transparent Process</h3>
+        <p>Stay informed with our clear and honest approach to buying your home</p>
+      </article>
+      <article>
+        <img src="images/icon-handshake.png" alt="">
+        <h3>Exceptional Support</h3>
+        <p>Providing peace of mind with our responsive and attentive customer service</p>
+      </article>
+    </section>
 
-          <!-- ===== Popular Residences ===== -->
-          <section id="residences">
-               <h2>Our Popular Residences</h2>
+    <!-- ===== Popular Residences ===== -->
+    <section id="residences">
+      <h2>Our Popular Residences</h2>
 
-               <article>
-                    <img src="images/residence-san-francisco.png" alt="House in San Francisco">
-                    <p><img src="images/icon-location.png" alt=""> San Francisco, California</p>
-                    <ul>
-                         <li><img src="images/icon-rooms.png" alt=""> 4 Rooms</li>
-                         <li><img src="images/icon-size.png" alt=""> 3,500 sq ft</li>
-                    </ul>
-                    <a href="#">Sign up</a>
-                    <p>$2,500,000</p>
-               </article>
+      <article>
+        <img src="images/residence-san-francisco.png" alt="House in San Francisco">
+        <p><img src="images/icon-location.png" alt=""> San Francisco, California</p>
+        <ul>
+          <li><img src="images/icon-rooms.png" alt=""> 4 Rooms</li>
+          <li><img src="images/icon-size.png" alt=""> 3,500 sq ft</li>
+        </ul>
+        <a href="#">Sign up</a>
+        <p>$2,500,000</p>
+      </article>
 
-               <article>
-                    <img src="images/residence-beverly-hills.png" alt="House in Beverly Hills">
-                    <p><img src="images/icon-location.png" alt=""> Beverly Hills, California</p>
-                    <ul>
-                         <li><img src="images/icon-rooms.png" alt=""> 3 Rooms</li>
-                         <li><img src="images/icon-size.png" alt=""> 1,500 sq ft</li>
-                    </ul>
-                    <a href="#">Sign up</a>
-                    <p>$850,000</p>
-               </article>
+      <article>
+        <img src="images/residence-beverly-hills.png" alt="House in Beverly Hills">
+        <p><img src="images/icon-location.png" alt=""> Beverly Hills, California</p>
+        <ul>
+          <li><img src="images/icon-rooms.png" alt=""> 3 Rooms</li>
+          <li><img src="images/icon-size.png" alt=""> 1,500 sq ft</li>
+        </ul>
+        <a href="#">Sign up</a>
+        <p>$850,000</p>
+      </article>
 
-               <article>
-                    <img src="images/residence-palo-alto.png" alt="House in Palo Alto">
-                    <p><img src="images/icon-location.png" alt=""> Palo Alto, California</p>
-                    <ul>
-                         <li><img src="images/icon-rooms.png" alt=""> 6 Rooms</li>
-                         <li><img src="images/icon-size.png" alt=""> 4,000 sq ft</li>
-                    </ul>
-                    <a href="#">Sign up</a>
-                    <p>$3,700,000</p>
-               </article>
-          </section>
+      <article>
+        <img src="images/residence-palo-alto.png" alt="House in Palo Alto">
+        <p><img src="images/icon-location.png" alt=""> Palo Alto, California</p>
+        <ul>
+          <li><img src="images/icon-rooms.png" alt=""> 6 Rooms</li>
+          <li><img src="images/icon-size.png" alt=""> 4,000 sq ft</li>
+        </ul>
+        <a href="#">Sign up</a>
+        <p>$3,700,000</p>
+      </article>
+    </section>
 
-          <!-- ===== Testimonials ===== -->
-          <section id="testimonials">
-               <h2>What People Say About Dwello</h2>
+    <!-- ===== Testimonials ===== -->
+    <section id="testimonials">
+      <h2>What People Say About Dwello</h2>
 
-               <article>
-                    <img src="images/testimonial-cover-sarah.jpg" alt="">
-                    <img src="images/avatar-sarah-nguyen.jpg" alt="Sarah Nguyen">
-                    <h3>Sarah Nguyen</h3>
-                    <p>San Francisco</p>
-                    <p>Rating: 5.0</p>
-                    <blockquote>
-                         <p>Dwello truly cares about their clients. They listened to my needs and preferences and helped
-                              me find the perfect home in the Bay Area. Their professionalism and attention to detail
-                              are unmatched.</p>
-                    </blockquote>
-               </article>
+      <article>
+        <img src="images/testimonial-cover-sarah.jpg" alt="">
+        <img src="images/avatar-sarah-nguyen.jpg" alt="Sarah Nguyen">
+        <h3>Sarah Nguyen</h3>
+        <p>San Francisco</p>
+        <p>Rating: 5.0</p>
+        <blockquote>
+          <p>Dwello truly cares about their clients. They listened to my needs and preferences and helped me find the perfect home in the Bay Area. Their professionalism and attention to detail are unmatched.</p>
+        </blockquote>
+      </article>
 
-               <article>
-                    <img src="images/testimonial-cover-michael.jpg" alt="">
-                    <img src="images/avatar-michael-rodriguez.jpg" alt="Michael Rodriguez">
-                    <h3>Michael Rodriguez</h3>
-                    <p>San Diego</p>
-                    <p>Rating: 4.5</p>
-                    <blockquote>
-                         <p>I had a fantastic experience working with Dwello. Their expertise and personalized service
-                              exceeded my expectations. I found my dream home quickly and smoothly. Highly recommended!
-                         </p>
-                    </blockquote>
-               </article>
+      <article>
+        <img src="images/testimonial-cover-michael.jpg" alt="">
+        <img src="images/avatar-michael-rodriguez.jpg" alt="Michael Rodriguez">
+        <h3>Michael Rodriguez</h3>
+        <p>San Diego</p>
+        <p>Rating: 4.5</p>
+        <blockquote>
+          <p>I had a fantastic experience working with Dwello. Their expertise and personalized service exceeded my expectations. I found my dream home quickly and smoothly. Highly recommended!</p>
+        </blockquote>
+      </article>
 
-               <article>
-                    <img src="images/testimonial-cover-emily.jpg" alt="">
-                    <img src="images/avatar-emily-johnson.jpg" alt="Emily Johnson">
-                    <h3>Emily Johnson</h3>
-                    <p>Los Angeles</p>
-                    <p>Rating: 5.0</p>
-                    <blockquote>
-                         <p>Dwello made my dream of owning a home a reality! Their team provided exceptional support and
-                              guided me through every step of the process. I couldn't be happier with my new home!</p>
-                    </blockquote>
-               </article>
+      <article>
+        <img src="images/testimonial-cover-emily.jpg" alt="">
+        <img src="images/avatar-emily-johnson.jpg" alt="Emily Johnson">
+        <h3>Emily Johnson</h3>
+        <p>Los Angeles</p>
+        <p>Rating: 5.0</p>
+        <blockquote>
+          <p>Dwello made my dream of owning a home a reality! Their team provided exceptional support and guided me through every step of the process. I couldn't be happier with my new home!</p>
+        </blockquote>
+      </article>
 
-               <button type="button" aria-label="Previous testimonial">Previous</button>
-               <button type="button" aria-label="Next testimonial">Next</button>
-          </section>
+      <button type="button" aria-label="Previous testimonial">Previous</button>
+      <button type="button" aria-label="Next testimonial">Next</button>
+    </section>
 
-          <!-- ===== Questions / Newsletter ===== -->
-          <section id="contact">
-               <h2>Do You Have Any Questions? Get Help From Us</h2>
-               <ul>
-                    <li><img src="images/icon-verified.png" alt=""> Chat live with our support team</li>
-                    <li><img src="images/icon-verified.png" alt=""> Browse our FAQ</li>
-               </ul>
-               <form>
-                    <label for="email"><img src="images/icon-email.png" alt=""> Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address...">
-                    <button type="submit">Submit</button>
-               </form>
-          </section>
+    <!-- ===== Questions / Newsletter ===== -->
+    <section id="contact">
+      <h2>Do You Have Any Questions? Get Help From Us</h2>
+      <ul>
+        <li><img src="images/icon-verified.png" alt=""> Chat live with our support team</li>
+        <li><img src="images/icon-verified.png" alt=""> Browse our FAQ</li>
+      </ul>
+      <form>
+        <label for="email"><img src="images/icon-email.png" alt=""> Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address...">
+        <button type="submit">Submit</button>
+      </form>
+    </section>
 
-     </main>
+  </main>
 
-     <!-- ===== Footer ===== -->
-     <footer id="footer">
-          <a href="#">Dwello</a>
-          <p>Bringing you closer to your dream home, one click at a time.</p>
+  <!-- ===== Footer ===== -->
+  <footer id="footer">
+    <a href="#">Dwello</a>
+    <p>Bringing you closer to your dream home, one click at a time.</p>
 
-          <nav aria-label="About">
-               <h4>About</h4>
-               <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Resources</a></li>
-               </ul>
-          </nav>
+    <nav aria-label="About">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </nav>
 
-          <nav aria-label="Support">
-               <h4>Support</h4>
-               <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-               </ul>
-          </nav>
+    <nav aria-label="Support">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </nav>
 
-          <nav aria-label="Find Us">
-               <h4>Find Us</h4>
-               <ul>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Newsletter</a></li>
-               </ul>
-          </nav>
+    <nav aria-label="Find Us">
+      <h4>Find Us</h4>
+      <ul>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Newsletter</a></li>
+      </ul>
+    </nav>
 
-          <nav aria-label="Our Social">
-               <h4>Our Social</h4>
-               <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter (x)</a></li>
-               </ul>
-          </nav>
-     </footer>
+    <nav aria-label="Our Social">
+      <h4>Our Social</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter (x)</a></li>
+      </ul>
+    </nav>
+  </footer>
 
 </body>
 
