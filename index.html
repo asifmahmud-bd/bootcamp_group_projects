@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dwello — Find Your Dream Home</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
-<style type="text/tailwindcss">
-  @theme {
-    --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
-    /* Brand */
-    --color-brand: #2b1b12;          /* dark brown: buttons, headings, logo */
-    --color-brand-soft: #ddc7bb;     /* sand: cards, search bar, footer */
-    --color-brand-light: #fef7f2;    /* cream: hero and testimonials backgrounds */
+      /* Brand */
+      --color-brand: #2b1b12;          /* dark brown: buttons, headings, logo */
+      --color-brand-soft: #ddc7bb;     /* sand: cards, search bar, footer */
+      --color-brand-light: #fef7f2;    /* cream: hero and testimonials backgrounds */
 
-    /* Surfaces */
-    --color-bg: #ffffff;             /* page background */
-    --color-field: #fbf5f1;          /* inputs, icon tiles */
-    --color-placeholder: #d9d9d9;    /* image placeholders */
+      /* Surfaces */
+      --color-bg: #ffffff;             /* page background */
+      --color-field: #fbf5f1;          /* inputs, icon tiles */
+      --color-placeholder: #d9d9d9;    /* image placeholders */
 
-    /* Text */
-    --color-text: #2b1b12;           /* headings */
-    --color-text-body: #4f3527;      /* paragraphs, stats, prices */
-    --color-text-muted: #695346;     /* search field labels */
-    --color-text-soft: #543e32;      /* help links, input placeholder */
+      /* Text */
+      --color-text: #2b1b12;           /* headings */
+      --color-text-body: #4f3527;      /* paragraphs, stats, prices */
+      --color-text-muted: #695346;     /* search field labels */
+      --color-text-soft: #543e32;      /* help links, input placeholder */
 
     /* Accent */
     --color-star: #ffc71e;           /* rating star */
-
-    --container-page: 77rem;   /* 1232px, the content width in the Figma file */
   }
-
- @layer base {
- /*  * { outline: 1px solid var(--color-star); } */ /*for debugging*/
-}
 </style>
 </head>
-<body class="max-w-page mx-auto px-6 overflow-x-clip">
+<body>
 
   <!-- ===== Header / Navigation ===== -->
   <header id="header">
@@ -124,7 +119,7 @@
 
     <!-- ===== About + stats ===== -->
     <section id="about">
-      <img src="assets/images/about-house-exterior.jpg" alt="Luxury home exterior, side view">
+      <img src="images/about-house-exterior.jpg" alt="Luxury home exterior, side view">
       <h2>We Help You To Find Your Dream Home</h2>
       <p>From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality</p>
       <ul>
@@ -301,4 +296,5 @@
   </footer>
 
 </body>
+
 </html>
