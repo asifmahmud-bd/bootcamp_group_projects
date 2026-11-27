@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dwello — Find Your Dream Home</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
-<style type="text/tailwindcss">
-  @theme {
-    --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
-    /* Brand */
-    --color-brand: #2b1b12;          /* dark brown: buttons, headings, logo */
-    --color-brand-soft: #ddc7bb;     /* sand: cards, search bar, footer */
-    --color-brand-light: #fef7f2;    /* cream: hero and testimonials backgrounds */
+      /* Brand */
+      --color-brand: #2b1b12;          /* dark brown: buttons, headings, logo */
+      --color-brand-soft: #ddc7bb;     /* sand: cards, search bar, footer */
+      --color-brand-light: #fef7f2;    /* cream: hero and testimonials backgrounds */
 
-    /* Surfaces */
-    --color-bg: #ffffff;             /* page background */
-    --color-field: #fbf5f1;          /* inputs, icon tiles */
-    --color-placeholder: #d9d9d9;    /* image placeholders */
+      /* Surfaces */
+      --color-bg: #ffffff;             /* page background */
+      --color-field: #fbf5f1;          /* inputs, icon tiles */
+      --color-placeholder: #d9d9d9;    /* image placeholders */
 
-    /* Text */
-    --color-text: #2b1b12;           /* headings */
-    --color-text-body: #4f3527;      /* paragraphs, stats, prices */
-    --color-text-muted: #695346;     /* search field labels */
-    --color-text-soft: #543e32;      /* help links, input placeholder */
+      /* Text */
+      --color-text: #2b1b12;           /* headings */
+      --color-text-body: #4f3527;      /* paragraphs, stats, prices */
+      --color-text-muted: #695346;     /* search field labels */
+      --color-text-soft: #543e32;      /* help links, input placeholder */
 
-    /* Accent */
-    --color-star: #ffc71e;           /* rating star */
-  }
-</style>
+      /* Accent */
+      --color-star: #ffc71e;           /* rating star */
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- ===== Header / Navigation ===== -->
@@ -86,15 +88,31 @@
     </section>
 
     <!-- ===== About + stats ===== -->
-    <section id="about">
-      <img src="images/about-house-exterior.jpg" alt="Luxury home exterior, side view">
-      <h2>We Help You To Find Your Dream Home</h2>
-      <p>From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality</p>
-      <ul>
-        <li><strong>8K+</strong> Houses Available</li>
-        <li><strong>6K+</strong> Houses Sold</li>
-        <li><strong>2K+</strong> Trusted Agents</li>
-      </ul>
+    <section id="about" class="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+      <img src="./assets/images/about-house-exterior.jpg" alt="Luxury home exterior, side view" class="h-full w-full rounded-xl object-cover">
+
+      <div>
+        <h2 class="text-3xl font-bold">We Help You To Find Your Dream Home</h2>
+        <p class="mt-4 text-[var(--color-text)]">
+          From cozy cottages to luxurious estates, our dedicated team guides you through every step
+          of the journey, ensuring your dream home becomes a reality.
+        </p>
+
+        <ul class="mt-8 grid grid-cols-3 gap-4 text-center">
+          <li>
+            <strong class="block text-2xl font-bold">8K+</strong>
+            <span class="mt-1 block">Houses Available</span>
+          </li>
+          <li>
+            <strong class="block text-2xl font-bold">6K+</strong>
+            <span class="mt-1 block">Houses Sold</span>
+          </li>
+          <li>
+            <strong class="block text-2xl font-bold">2K+</strong>
+            <span class="mt-1 block">Trusted Agents</span>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- ===== Why Choose Us ===== -->
@@ -264,4 +282,5 @@
   </footer>
 
 </body>
+
 </html>
